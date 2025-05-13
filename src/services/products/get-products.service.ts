@@ -3,6 +3,7 @@ import { Product } from "@/types/product";
 
 export type ProductFilterDTO = {
   page?: number;
+  pageSize?: number;
   search?: string;
   price_range?: {
     start?: number;
@@ -35,10 +36,11 @@ export async function getProductsService(
 
   const json: ProductApiResponse = await response.json();
 
-  console.log("Response from API:", json);
   return {
     products: json.data,
     pagination: {
+      current: filters.page || 1,
+      pageSize: filters.pageSize || 10,
       first: json.first,
       prev: json.prev,
       next: json.next,
@@ -53,6 +55,8 @@ function buildQueryParams(filters: ProductFilterDTO): string {
   const params = new URLSearchParams();
 
   if (filters.page) params.set("_page", filters.page.toString());
+  if (filters.pageSize) params.set("_per_page", filters.pageSize.toString());
+
   if (filters.search) params.set("search", filters.search);
   if (filters.sort) params.set("sort", filters.sort);
 

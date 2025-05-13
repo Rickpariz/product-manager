@@ -1,7 +1,7 @@
 import { Header } from "@/components/layout/header";
 import ProductFilters from "@/features/products/product-filters";
 import ProductList from "@/features/products/product-list";
-import ProductListSkeleton from "@/features/products/product-list/loading";
+import ProductListSkeleton from "@/features/products/product-list/components/product-list-skeleton";
 import { Suspense } from "react";
 
 export default function Home() {

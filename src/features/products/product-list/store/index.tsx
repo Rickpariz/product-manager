@@ -1,44 +1,69 @@
 import { create } from "zustand";
 import { Product } from "@/types/product";
 import { getProductsService } from "@/services/products/get-products.service";
-import { useProductFilters } from "../../product-filters/store";
 import { Pagination } from "@/types/pagination";
+
+type ResetParams = {
+  list?: Product[];
+  pagination?: Pagination;
+};
+
+type ProductFilters = {
+  search: string;
+  price_range: {
+    start?: number;
+    end?: number;
+  };
+  sort?: string;
+};
 
 type ProductListStore = {
   products: Product[];
+  filters: ProductFilters | null;
   loading: boolean;
   error: string | null;
-  pagination: Pagination | null;
-  page: number;
+  pagination: Pagination;
 
-  fetchProducts: (page?: number) => Promise<void>;
-  reset: () => void;
+  fetchProducts: () => Promise<void>;
+  reset: (params: ResetParams) => void;
+  setPage: (page: number) => void;
+  setPageSize: (pageSize: number) => void;
+  setFilters: (filters: Partial<ProductFilters>) => void;
 };
 
-export const useProductList = create<ProductListStore>((set) => ({
+export const useProductList = create<ProductListStore>((set, get) => ({
   products: [],
+  filters: null,
   loading: false,
   error: null,
-  pagination: null,
-  page: 1,
+  pagination: {
+    current: 1,
+    pageSize: 10,
+    first: 1,
+    prev: null,
+    next: null,
+    last: 1,
+    pages: 1,
+    items: 0,
+  },
 
-  fetchProducts: async (page = 1) => {
-    const { filters } = useProductFilters.getState();
+  fetchProducts: async () => {
+    const { pagination, filters } = get();
 
     set({ loading: true, error: null });
 
     try {
       const result = await getProductsService({
-        page,
-        search: filters.search,
-        price_range: filters.price_range,
-        sort: filters.sort,
+        page: pagination.current,
+        pageSize: pagination.pageSize,
+        search: filters?.search,
+        price_range: filters?.price_range,
+        sort: filters?.sort,
       });
 
       set({
         products: result.products,
         pagination: result.pagination,
-        page,
         loading: false,
       });
     } catch {
@@ -46,12 +71,47 @@ export const useProductList = create<ProductListStore>((set) => ({
     }
   },
 
-  reset: () =>
+  setFilters: (newFilters) =>
+    set((state) => ({
+      filters: {
+        ...state.filters,
+        ...newFilters,
+        search: newFilters.search ?? state.filters?.search ?? "",
+        price_range: {
+          ...(state.filters?.price_range || {}),
+          ...(newFilters.price_range || {}),
+        },
+      },
+    })),
+
+  reset: (params) =>
     set({
-      products: [],
-      pagination: null,
-      page: 1,
+      products: params.list || [],
+      pagination: params.pagination,
       loading: false,
       error: null,
     }),
+
+  setPage: (page) => {
+    set((state) => ({
+      ...state,
+      pagination: {
+        ...state.pagination,
+        current: page,
+      },
+    }));
+    get().fetchProducts();
+  },
+
+  setPageSize: (size) => {
+    set((state) => ({
+      ...state,
+      pagination: {
+        ...state.pagination,
+        current: 1,
+        pageSize: size,
+      },
+    }));
+    get().fetchProducts();
+  },
 }));
