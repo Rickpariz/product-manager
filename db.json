@@ -1,0 +1,145 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Teclado",
+      "category": "Acessórios",
+      "price": 150,
+      "description": "Teclado mecânico",
+      "image": "https://images5.kabum.com.br/produtos/fotos/401375/teclado-gamer-redragon-lakshmi-switch-brown-layout-60-abnt2-verde-k606-og-gy-bk-pt-brown-_1671624936_g.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Mouse",
+      "category": "Acessórios",
+      "price": 80,
+      "description": "Mouse óptico sem fio"
+    },
+    {
+      "id": "3",
+      "name": "Monitor",
+      "category": "Periféricos",
+      "price": 1200,
+      "description": "Monitor Full HD 24 polegadas"
+    },
+    {
+      "id": "4",
+      "name": "Notebook",
+      "category": "Computadores",
+      "price": 3500,
+      "description": "Notebook com Intel i7 e 16GB RAM"
+    },
+    {
+      "id": "5",
+      "name": "Cadeira Gamer",
+      "category": "Móveis",
+      "price": 950,
+      "description": "Cadeira ergonômica com ajuste de altura"
+    },
+    {
+      "id": "6",
+      "name": "Webcam",
+      "category": "Acessórios",
+      "price": 230,
+      "description": "Webcam Full HD com microfone embutido"
+    },
+    {
+      "id": "7",
+      "name": "Headset",
+      "category": "Áudio",
+      "price": 300,
+      "description": "Headset com cancelamento de ruído"
+    },
+    {
+      "id": "8",
+      "name": "HD Externo",
+      "category": "Armazenamento",
+      "price": 450,
+      "description": "HD externo de 1TB USB 3.0"
+    },
+    {
+      "id": "9",
+      "name": "SSD",
+      "category": "Armazenamento",
+      "price": 350,
+      "description": "SSD 500GB NVMe"
+    },
+    {
+      "id": "10",
+      "name": "Placa de Vídeo",
+      "category": "Hardware",
+      "price": 2500,
+      "description": "GeForce RTX 3060 12GB"
+    },
+    {
+      "id": "11",
+      "name": "Processador",
+      "category": "Hardware",
+      "price": 1600,
+      "description": "AMD Ryzen 7 5800X"
+    },
+    {
+      "id": "12",
+      "name": "Memória RAM",
+      "category": "Hardware",
+      "price": 400,
+      "description": "2x8GB DDR4 3200MHz"
+    },
+    {
+      "id": "13",
+      "name": "Fonte",
+      "category": "Hardware",
+      "price": 300,
+      "description": "Fonte 600W 80 Plus Bronze"
+    },
+    {
+      "id": "14",
+      "name": "Gabinete",
+      "category": "Hardware",
+      "price": 350,
+      "description": "Gabinete Mid Tower com RGB"
+    },
+    {
+      "id": "15",
+      "name": "Impressora",
+      "category": "Periféricos",
+      "price": 700,
+      "description": "Impressora multifuncional Wi-Fi"
+    },
+    {
+      "id": "16",
+      "name": "Roteador",
+      "category": "Rede",
+      "price": 200,
+      "description": "Roteador Dual Band 1200Mbps"
+    },
+    {
+      "id": "17",
+      "name": "Pen Drive",
+      "category": "Armazenamento",
+      "price": 50,
+      "description": "Pen Drive 64GB USB 3.0"
+    },
+    {
+      "id": "18",
+      "name": "Cooler",
+      "category": "Hardware",
+      "price": 120,
+      "description": "Cooler para processador com LED"
+    },
+    {
+      "id": "19",
+      "name": "Estabilizador",
+      "category": "Energia",
+      "price": 250,
+      "description": "Estabilizador 600VA"
+    },
+    {
+      "id": "20",
+      "name": "Tablet",
+      "category": "Eletrônicos",
+      "price": 1800,
+      "description": "Tablet 10'' com 64GB de armazenamento"
+    }
+  ]
+}
