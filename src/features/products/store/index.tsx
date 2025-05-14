@@ -110,7 +110,6 @@ export const useProductStore = create<ProductStore>((set, get) => ({
         current: page,
       },
     }));
-    get().fetchProducts();
   },
 
   setPageSize: (size) => {
@@ -122,6 +121,5 @@ export const useProductStore = create<ProductStore>((set, get) => ({
         pageSize: size,
       },
     }));
-    get().fetchProducts();
   },
 }));
