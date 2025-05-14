@@ -18,15 +18,15 @@ import {
 
 export function Sorting({ onChange }: { onChange: (sort: string) => void }) {
   return (
-    <div className="space-y-1">
+    <div className="flex flex-col gap-2 w-full md:w-fit">
       <Label htmlFor="sort" className="text-sm font-medium">
         Visualizar por
       </Label>
       <Select onValueChange={onChange} defaultValue="name-asc">
         <SelectTrigger id="sort">
-          <SelectValue placeholder="Selecione uma opção" />
+          <SelectValue className="w-full flex-1" placeholder="Selecione uma opção" />
         </SelectTrigger>
-        <SelectContent>
+        <SelectContent className="w-full flex-1">
           <SelectGroup>
             <SelectLabel>Nome</SelectLabel>
             <SelectItem value="name-asc" className="flex items-center">

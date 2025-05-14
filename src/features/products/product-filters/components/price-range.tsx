@@ -21,7 +21,7 @@ export function PriceRange({ onChange }: PriceRangeProps) {
   );
 
   return (
-    <div className="space-y-2">
+    <div className="w-full flex flex-col gap-2">
       <Label className="text-sm font-medium">Faixa de Preço</Label>
       <div className="flex items-center gap-2">
         <InputMoney
