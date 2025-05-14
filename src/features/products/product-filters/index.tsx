@@ -1,30 +1,14 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Slider } from "@/components/ui/slider";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-
-import {
-  ArrowDownAZ,
-  ArrowDownWideNarrow,
-  ArrowUpAZ,
-  ArrowUpWideNarrow,
-  Search,
-} from "lucide-react";
 import { useProductFilters } from "./hooks/use-product-filters.hook";
+import { PriceRange } from "./components/price-range";
+import { Search } from "lucide-react";
+import { Sorting } from "./components/sorting";
 
 export function ProductFilters() {
-  const { onSearch } = useProductFilters();
+  const { onSearch, onPriceRangeChange, onSortChange } = useProductFilters();
 
   return (
     <div className="flex gap-4 mt-10 border rounded-2xl p-4 justify-between items-center">
@@ -44,61 +28,10 @@ export function ProductFilters() {
         </div>
       </div>
       <div>
-        <div className="flex justify-between items-center gap-2">
-          <Label className="text-sm font-medium">Faixa de Preço</Label>
-          <div className="flex gap-1">
-            <Badge variant="outline" className="font-mono">
-              R$ 0
-            </Badge>
-            <span>-</span>
-            <Badge variant="outline" className="font-mono">
-              R$ 0
-            </Badge>
-          </div>
-        </div>
-        <Slider defaultValue={[0, 100]} max={100} step={1} className="py-4" />
+        <PriceRange onChange={onPriceRangeChange} />
       </div>
-      <div className="space-y-1">
-        <Label htmlFor="sort" className="text-sm font-medium">
-          Visualizar por
-        </Label>
-        <Select>
-          <SelectTrigger id="sort" className="">
-            <SelectValue placeholder="Selecione uma opção" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectGroup>
-              <SelectLabel>Nome</SelectLabel>
-              <SelectItem value="name-asc" className="flex items-center">
-                <div className="flex items-center">
-                  <ArrowDownAZ className="mr-2 h-4 w-4" />
-                  <span>Nome (A-Z)</span>
-                </div>
-              </SelectItem>
-              <SelectItem value="name-desc">
-                <div className="flex items-center">
-                  <ArrowUpAZ className="mr-2 h-4 w-4" />
-                  <span>Nome (Z-A)</span>
-                </div>
-              </SelectItem>
-            </SelectGroup>
-            <SelectGroup>
-              <SelectLabel>Preço</SelectLabel>
-              <SelectItem value="price-asc">
-                <div className="flex items-center">
-                  <ArrowDownWideNarrow className="mr-2 h-4 w-4" />
-                  <span>Preço (Menor-Maior)</span>
-                </div>
-              </SelectItem>
-              <SelectItem value="price-desc">
-                <div className="flex items-center">
-                  <ArrowUpWideNarrow className="mr-2 h-4 w-4" />
-                  <span>Preço (Maior-Menor)</span>
-                </div>
-              </SelectItem>
-            </SelectGroup>
-          </SelectContent>
-        </Select>
+      <div>
+        <Sorting onChange={onSortChange} />
       </div>
     </div>
   );

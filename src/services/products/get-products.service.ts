@@ -10,6 +10,7 @@ export type ProductFilterDTO = {
     end?: number;
   };
   sort?: string;
+  order?: string;
 };
 
 export type ProductApiResponse = Product[];
@@ -61,13 +62,14 @@ function buildQueryParams(filters: ProductFilterDTO): string {
   if (filters.pageSize) params.set("_limit", filters.pageSize.toString());
 
   if (filters.search) params.set("q", filters.search);
-  if (filters.sort) params.set("sort", filters.sort);
+  if (filters.sort) params.set("_sort", filters.sort);
+  if (filters.order) params.set("_order", filters.order);
 
   if (filters.price_range?.start !== undefined)
-    params.set("price_range_start", filters.price_range.start.toString());
+    params.set("price_gte", filters.price_range.start.toString());
 
   if (filters.price_range?.end !== undefined)
-    params.set("price_range_end", filters.price_range.end.toString());
+    params.set("price_lte", filters.price_range.end.toString());
 
   return params.toString();
 }

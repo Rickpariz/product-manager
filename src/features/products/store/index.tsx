@@ -15,6 +15,7 @@ type ProductFilters = {
     end?: number;
   };
   sort?: string;
+  order?: string;
 };
 
 type ProductStore = {
@@ -33,7 +34,15 @@ type ProductStore = {
 
 export const useProductStore = create<ProductStore>((set, get) => ({
   products: [],
-  filters: null,
+  filters: {
+    search: "",
+    price_range: {
+      start: undefined,
+      end: undefined,
+    },
+    sort: "name",
+    order: "asc",
+  },
   loading: false,
   error: null,
   pagination: {
@@ -59,6 +68,7 @@ export const useProductStore = create<ProductStore>((set, get) => ({
         search: filters?.search,
         price_range: filters?.price_range,
         sort: filters?.sort,
+        order: filters?.order,
       });
 
       set({
