@@ -13,7 +13,7 @@ const formSchema = z.object({
     .string()
     .min(2, { message: "Categoria deve ter pelo menos 2 caracteres" }),
   price: z.number().refine((val) => !isNaN(Number(val)) && Number(val) > 0, {
-    message: "Preço deve ser um número positivo",
+    message: "Preço deve ser maior que R$ 0,00",
   }),
   description: z
     .string()
