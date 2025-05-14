@@ -12,7 +12,7 @@ const formSchema = z.object({
   category: z
     .string()
     .min(2, { message: "Categoria deve ter pelo menos 2 caracteres" }),
-  price: z.string().refine((val) => !isNaN(Number(val)) && Number(val) > 0, {
+  price: z.number().refine((val) => !isNaN(Number(val)) && Number(val) > 0, {
     message: "Preço deve ser um número positivo",
   }),
   description: z
@@ -37,7 +37,7 @@ export const useProductForm = () => {
     defaultValues: {
       name: "",
       category: "",
-      price: "",
+      price: 0,
       description: "",
       image: "",
     },

@@ -12,6 +12,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useProductForm } from "./hooks/use-product-form.hook";
+import { InputMoney } from "@/components/form/input-money";
 
 export default function ProductForm() {
   const { form, onSubmit, isLoading } = useProductForm();
@@ -54,7 +55,7 @@ export default function ProductForm() {
             <FormItem>
               <FormLabel>Preço (R$)</FormLabel>
               <FormControl>
-                <Input {...field} type="number" min="0.01" step="0.01" />
+                <InputMoney value={field.value} onChange={field.onChange} />
               </FormControl>
               <FormMessage />
             </FormItem>

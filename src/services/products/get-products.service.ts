@@ -66,10 +66,13 @@ function buildQueryParams(filters: ProductFilterDTO): string {
   if (filters.sort) params.set("_sort", filters.sort);
   if (filters.order) params.set("_order", filters.order);
 
-  if (filters.price_range?.start !== undefined)
+  if (
+    filters.price_range?.start !== 0 &&
+    filters.price_range?.start !== undefined
+  )
     params.set("price_gte", filters.price_range.start.toString());
 
-  if (filters.price_range?.end !== undefined)
+  if (filters.price_range?.end !== 0 && filters.price_range?.end !== undefined)
     params.set("price_lte", filters.price_range.end.toString());
 
   return params.toString();

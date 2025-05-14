@@ -1,47 +1,37 @@
 "use client";
 
-import { useRef } from "react";
+import { useState, useCallback } from "react";
 import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
+import { InputMoney } from "@/components/form/input-money";
 
-export function PriceRange({
-  onChange,
-}: {
+type PriceRangeProps = {
   onChange: (range: { start?: number; end?: number }) => void;
-}) {
-  const minInputRef = useRef<HTMLInputElement>(null);
-  const maxInputRef = useRef<HTMLInputElement>(null);
+};
 
-  const handleChange = () => {
-    const minValue =
-      minInputRef.current && minInputRef.current.value
-        ? Number(minInputRef.current.value)
-        : undefined;
-    const maxValue =
-      maxInputRef.current && maxInputRef.current.value
-        ? Number(maxInputRef.current.value)
-        : undefined;
+export function PriceRange({ onChange }: PriceRangeProps) {
+  const [range, setRange] = useState<{ start?: number; end?: number }>({});
 
-    onChange({ start: minValue, end: maxValue });
-  };
+  const handleChange = useCallback(
+    (key: "start" | "end", value: number) => {
+      const updated = { ...range, [key]: value };
+      setRange(updated);
+      onChange(updated);
+    },
+    [range, onChange]
+  );
 
   return (
     <div className="space-y-2">
       <Label className="text-sm font-medium">Faixa de Preço</Label>
       <div className="flex items-center gap-2">
-        <Input
-          type="number"
-          min="0"
+        <InputMoney
           placeholder="Mín"
-          ref={minInputRef}
-          onChange={handleChange}
+          onChange={(v) => handleChange("start", v)}
         />
         <span className="text-muted-foreground">-</span>
-        <Input
-          type="number"
+        <InputMoney
           placeholder="Máx"
-          ref={maxInputRef}
-          onChange={handleChange}
+          onChange={(v) => handleChange("end", v)}
         />
       </div>
     </div>
