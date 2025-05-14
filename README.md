@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📌 Gerenciador de Produtos - Frontend
 
-## Getting Started
+Este é o frontend de um **Gerenciador de Produtos**, desenvolvido em **NextJs** com **TailwindCSS** e **ShadCN UI** para estilização. A aplicação simula a listagem de produtos com carregamento, filtros e paginação, integrada a uma API mock com `json-server`.
 
-First, run the development server:
+## 🚀 Tecnologias Utilizadas
+
+- 🌐 **[Next.js](https://nextjs.org/)** – Framework React com suporte a SSR e rotas.
+- 🎨 **[TailwindCSS](https://tailwindcss.com/)** – Framework utilitário para estilização.
+- 💅 **[ShadCN UI](https://ui.shadcn.com/)** – Componentes de UI acessíveis e personalizáveis.
+- 🔧 **[Zustand](https://zustand-demo.pmnd.rs/)** – Gerenciamento de estado global simples e escalável.
+- 🧪 **[Vitest](https://vitest.dev/)** + **[Testing Library](https://testing-library.com/)** – Ferramentas para testes unitários e de renderização.
+- 🧪 **[json-server](https://github.com/typicode/json-server)** – Simulador de API REST para desenvolvimento local.
+- 🔄 **[concurrently](https://www.npmjs.com/package/concurrently)** – Executa múltiplos processos (Next.js + API) simultaneamente.
+
+## 📂 Estrutura de Pastas
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+src
+├── app                # Páginas da aplicação (Next.js routing)
+├── components         # Componentes reutilizáveis e baseados em ShadCN
+├── features
+│   └── products       # Implementação das funcionalidades por domínio
+├── services           # Integrações com a API e abstrações de serviços HTTP
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📦 Como Rodar o Projeto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1. Instalação das dependências
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```sh
+yarn install
+```
 
-## Learn More
+### 2. Inicialização da aplicação
 
-To learn more about Next.js, take a look at the following resources:
+```sh
+yarn dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+> Esse comando inicia tanto a aplicação Next.js quanto o servidor da API mock (`json-server`) simultaneamente usando `concurrently`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 3. API mock (json-server)
 
-## Deploy on Vercel
+A API está disponível em `http://localhost:3333/products` para simular chamadas reais. O arquivo `db.json` com os dados está na raiz do projeto.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🧪 Testes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Para rodar os testes:
+
+```sh
+yarn test
+```
+
+Inclui testes de renderização e comportamento usando **Vitest** e **Testing Library**.
+
+## 💡 Comentários Técnicos
+
+- Organização por domínio (feature-based):
+  - A estrutura do projeto está organizada por domínio (ex: features/products), o que facilita a escalabilidade, o isolamento de responsabilidades e a manutenção do código em times maiores.
+
+- Uso de hooks para encapsular lógica de UI:
+  - Lógicas de estado e efeitos foram extraídas para hooks reutilizáveis, seguindo a abordagem do MVVM (Model View View Model). Isso mantém os componentes de UI mais limpos e focados na renderização.
+
+- Uso de componentes do ShadCN:
+  - A escolha do ShadCN UI fornece componentes acessíveis, personalizáveis e já integrados com o TailwindCSS, acelerando o desenvolvimento sem abrir mão da consistência visual.
+
+- Testes com Vitest + Testing Library:
+  - Foram priorizados testes de comportamento e renderização com Testing Library, por serem mais próximos da experiência real do usuário e garantirem maior robustez na interface.
+
+- Controle de estado global
+  - Para atender à exigência de **gerenciamento de estado global** do teste, nas integrações com as APIs foi implementado o gerenciamento manual com Zustand. Porém, em uma aplicação real, abordagens como React Query ou SSR do Next.js poderiam ser alternativas mais eficientes para otimizar o gerenciamento de dados e cache.
