@@ -26,6 +26,7 @@ type ProductStore = {
   pagination: Pagination;
 
   fetchProducts: () => Promise<void>;
+  addProduct: (product: Product) => void;
   reset: (params: ResetParams) => void;
   setPage: (page: number) => void;
   setPageSize: (pageSize: number) => void;
@@ -79,6 +80,16 @@ export const useProductStore = create<ProductStore>((set, get) => ({
     } catch {
       set({ error: "Ocorreu um erro ao buscar os produtos", loading: false });
     }
+  },
+
+  addProduct: (product) => {
+    set((state) => ({
+      products: [product, ...state.products],
+      pagination: {
+        ...state.pagination,
+        items: state.pagination.items + 1,
+      },
+    }));
   },
 
   setFilters: (newFilters) =>

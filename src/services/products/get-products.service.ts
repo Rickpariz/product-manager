@@ -1,3 +1,4 @@
+import { delay } from "@/lib/delay";
 import { Pagination } from "@/types/pagination";
 import { Product } from "@/types/product";
 
@@ -23,7 +24,7 @@ export type ProductResult = {
 export async function getProductsService(
   filters: ProductFilterDTO = { page: 1 }
 ): Promise<ProductResult> {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+  await delay(1000);
   const query = buildQueryParams(filters);
   const url = `http://localhost:3333/products?${query}`;
 

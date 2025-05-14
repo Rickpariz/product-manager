@@ -1,45 +1,49 @@
 "use client";
 
-import { useState } from "react";
-import { Badge } from "@/components/ui/badge";
+import { useRef } from "react";
 import { Label } from "@/components/ui/label";
-import { Slider } from "@/components/ui/slider";
+import { Input } from "@/components/ui/input";
 
 export function PriceRange({
   onChange,
 }: {
-  onChange: (range: [number, number]) => void;
+  onChange: (range: { start?: number; end?: number }) => void;
 }) {
-  const [localValue, setLocalValue] = useState<[number, number]>([0, 5000]);
+  const minInputRef = useRef<HTMLInputElement>(null);
+  const maxInputRef = useRef<HTMLInputElement>(null);
 
-  const handleSliderChange = (newValue: number[]) => {
-    const range: [number, number] = [newValue[0], newValue[1]];
-    setLocalValue(range);
-    onChange(range);
+  const handleChange = () => {
+    const minValue =
+      minInputRef.current && minInputRef.current.value
+        ? Number(minInputRef.current.value)
+        : undefined;
+    const maxValue =
+      maxInputRef.current && maxInputRef.current.value
+        ? Number(maxInputRef.current.value)
+        : undefined;
+
+    onChange({ start: minValue, end: maxValue });
   };
 
   return (
-    <div className="w-full">
-      <div className="flex justify-between items-center gap-2">
-        <Label className="text-sm font-medium">Faixa de Preço</Label>
-        <div className="flex gap-1">
-          <Badge variant="outline" className="font-mono">
-            R$ {localValue[0]}
-          </Badge>
-          <span>-</span>
-          <Badge variant="outline" className="font-mono">
-            R$ {localValue[1]}
-          </Badge>
-        </div>
+    <div className="space-y-2">
+      <Label className="text-sm font-medium">Faixa de Preço</Label>
+      <div className="flex items-center gap-2">
+        <Input
+          type="number"
+          min="0"
+          placeholder="Mín"
+          ref={minInputRef}
+          onChange={handleChange}
+        />
+        <span className="text-muted-foreground">-</span>
+        <Input
+          type="number"
+          placeholder="Máx"
+          ref={maxInputRef}
+          onChange={handleChange}
+        />
       </div>
-      <Slider
-        min={0}
-        max={5000}
-        step={10}
-        value={localValue}
-        onValueChange={handleSliderChange}
-        className="py-4"
-      />
     </div>
   );
 }

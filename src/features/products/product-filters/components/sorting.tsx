@@ -23,7 +23,7 @@ export function Sorting({ onChange }: { onChange: (sort: string) => void }) {
         Visualizar por
       </Label>
       <Select onValueChange={onChange} defaultValue="name-asc">
-        <SelectTrigger id="sort" className="">
+        <SelectTrigger id="sort">
           <SelectValue placeholder="Selecione uma opção" />
         </SelectTrigger>
         <SelectContent>

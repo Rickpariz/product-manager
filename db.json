@@ -140,6 +140,46 @@
       "category": "Eletrônicos",
       "price": 1800,
       "description": "Tablet 10'' com 64GB de armazenamento"
+    },
+    {
+      "id": "3a0ce8ed-4666-4141-bd03-f2c67aaef734",
+      "name": "Testando",
+      "category": "Teste",
+      "price": 100,
+      "description": "Descrição",
+      "image": ""
+    },
+    {
+      "id": "3162fa09-7658-42dd-8b9c-b94e5c6121e3",
+      "name": "Testando",
+      "category": "Teste",
+      "price": 300,
+      "description": "Descrição",
+      "image": ""
+    },
+    {
+      "id": "e8a94e20-5a05-4e8d-a76b-ea68dbf1d4ef",
+      "name": "Teste",
+      "category": "Teste",
+      "price": 10,
+      "description": "Testando aqui",
+      "image": ""
+    },
+    {
+      "id": "5b84e48b-81c5-4cc8-93b5-22ead3b9d2f7",
+      "name": "Testando",
+      "category": "Teste",
+      "price": 100,
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "image": ""
+    },
+    {
+      "id": "be077713-2a91-47f0-89a5-6c36862d7d3b",
+      "name": "The last of us 2",
+      "category": "Jogos",
+      "price": 200,
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "image": "https://gmedia.playstation.com/is/image/SIEPDC/The-last-of-us-part-ii-remastered-hero-banner-desktop-02-en-16mar23?$4000px$"
     }
   ]
 }

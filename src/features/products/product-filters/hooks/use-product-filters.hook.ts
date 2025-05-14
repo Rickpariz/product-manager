@@ -19,14 +19,17 @@ export const useProductFilters = () => {
     });
   }, 500);
 
-  const onPriceRangeChange = useDebouncedCallback((range: [number, number]) => {
-    setFilters({
-      price_range: {
-        start: range[0],
-        end: range[1],
-      },
-    });
-  }, 500);
+  const onPriceRangeChange = useDebouncedCallback(
+    (range: { start?: number; end?: number }) => {
+      setFilters({
+        price_range: {
+          start: range.start,
+          end: range.end,
+        },
+      });
+    },
+    500
+  );
 
   const onSortChange = (value: string) => {
     const { sort, order } = SORT_OPTIONS[value as SortKey];
