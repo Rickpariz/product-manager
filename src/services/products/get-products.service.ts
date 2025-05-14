@@ -12,9 +12,7 @@ export type ProductFilterDTO = {
   sort?: string;
 };
 
-export type ProductApiResponse = Pagination & {
-  data: Product[];
-};
+export type ProductApiResponse = Product[];
 
 export type ProductResult = {
   products: Product[];
@@ -34,19 +32,24 @@ export async function getProductsService(
     throw new Error("Erro ao buscar produtos");
   }
 
-  const json: ProductApiResponse = await response.json();
+  const total = Number(response.headers.get("X-Total-Count") || 0);
+  const products: ProductApiResponse = await response.json();
+
+  const currentPage = filters.page || 1;
+  const pageSize = filters.pageSize || 10;
+  const totalPages = Math.ceil(total / pageSize);
 
   return {
-    products: json.data,
+    products,
     pagination: {
-      current: filters.page || 1,
-      pageSize: filters.pageSize || 10,
-      first: json.first,
-      prev: json.prev,
-      next: json.next,
-      last: json.last,
-      pages: json.pages,
-      items: json.items,
+      current: currentPage,
+      pageSize: pageSize,
+      first: 1,
+      prev: currentPage > 1 ? currentPage - 1 : null,
+      next: currentPage < totalPages ? currentPage + 1 : null,
+      last: totalPages,
+      pages: totalPages,
+      items: total,
     },
   };
 }
@@ -55,9 +58,9 @@ function buildQueryParams(filters: ProductFilterDTO): string {
   const params = new URLSearchParams();
 
   if (filters.page) params.set("_page", filters.page.toString());
-  if (filters.pageSize) params.set("_per_page", filters.pageSize.toString());
+  if (filters.pageSize) params.set("_limit", filters.pageSize.toString());
 
-  if (filters.search) params.set("search", filters.search);
+  if (filters.search) params.set("q", filters.search);
   if (filters.sort) params.set("sort", filters.sort);
 
   if (filters.price_range?.start !== undefined)

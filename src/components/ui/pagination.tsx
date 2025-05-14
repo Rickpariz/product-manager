@@ -6,19 +6,23 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import type { Pagination } from "@/types/pagination";
 import {
   ChevronLeft,
   ChevronRight,
   ChevronsLeft,
   ChevronsRight,
 } from "lucide-react";
-import { useProductList } from "../store";
 
-export function ProductListPagination() {
-  const { setPage, setPageSize, pagination } = useProductList();
+interface Props {
+  pagination: Pagination;
+  setPageSize: (size: number) => void;
+  setPage: (page: number) => void;
+}
+
+export function Pagination(props: Props) {
+  const { setPage, setPageSize, pagination } = props;
   const { current: page, pageSize } = pagination;
-
-  console.log(pagination);
 
   return (
     <div className="flex items-center justify-between px-2 mx-auto">

@@ -1,3 +1,5 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -19,8 +21,11 @@ import {
   ArrowUpWideNarrow,
   Search,
 } from "lucide-react";
+import { useProductFilters } from "./hooks/use-product-filters.hook";
 
-export default function ProductFilters() {
+export function ProductFilters() {
+  const { onSearch } = useProductFilters();
+
   return (
     <div className="flex gap-4 mt-10 border rounded-2xl p-4 justify-between items-center">
       <div className="space-y-1">
@@ -34,6 +39,7 @@ export default function ProductFilters() {
             type="search"
             placeholder="Buscar por nome..."
             className="pl-8 w-full"
+            onChange={onSearch}
           />
         </div>
       </div>

@@ -5,7 +5,7 @@ interface ProductCardProps {
   product: Product;
 }
 
-export default function ProductCard({ product }: ProductCardProps) {
+export function ProductCard({ product }: ProductCardProps) {
   return (
     <div className="rounded-xl border overflow-hidden h-full flex flex-col">
       <div className="flex p-4 h-full">

@@ -1,23 +1,13 @@
 "use client";
 
-import ProductCard from "./product-card";
-import { useProductList } from "../store";
-import { useEffect } from "react";
-import { ProductListPagination } from "./product-list-pagination";
-import { ProductResult } from "@/services/products/get-products.service";
-import ProductListSkeleton from "./product-list-skeleton";
+import { useProductList } from "../hooks/use-product-list.hook";
+import { Pagination } from "@/components/ui/pagination";
+import { ProductListSkeleton } from "./product-list-skeleton";
+import { ProductCard } from "./product-card";
 
-type Props = { initialState: ProductResult };
-
-export default function ProductListClient({ initialState }: Props) {
-  const { products, reset, loading } = useProductList();
-
-  useEffect(() => {
-    reset({
-      list: initialState.products,
-      pagination: initialState.pagination,
-    });
-  }, [initialState, reset]);
+export function ProductListClient() {
+  const { products, pagination, loading, setPage, setPageSize } =
+    useProductList();
 
   return (
     <div className="mt-4">
@@ -31,7 +21,11 @@ export default function ProductListClient({ initialState }: Props) {
             ))}
           </div>
 
-          <ProductListPagination />
+          <Pagination
+            pagination={pagination}
+            setPage={setPage}
+            setPageSize={setPageSize}
+          />
         </div>
       ) : (
         <div className="col-span-full text-center py-8">

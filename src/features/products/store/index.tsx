@@ -17,7 +17,7 @@ type ProductFilters = {
   sort?: string;
 };
 
-type ProductListStore = {
+type ProductStore = {
   products: Product[];
   filters: ProductFilters | null;
   loading: boolean;
@@ -31,7 +31,7 @@ type ProductListStore = {
   setFilters: (filters: Partial<ProductFilters>) => void;
 };
 
-export const useProductList = create<ProductListStore>((set, get) => ({
+export const useProductStore = create<ProductStore>((set, get) => ({
   products: [],
   filters: null,
   loading: false,

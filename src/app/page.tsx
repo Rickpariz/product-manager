@@ -1,17 +1,13 @@
 import { Header } from "@/components/layout/header";
-import ProductFilters from "@/features/products/product-filters";
-import ProductList from "@/features/products/product-list";
-import ProductListSkeleton from "@/features/products/product-list/components/product-list-skeleton";
-import { Suspense } from "react";
+import { ProductFilters } from "@/features/products/product-filters";
+import { ProductListClient } from "@/features/products/product-list";
 
 export default function Home() {
   return (
     <>
       <Header />
       <ProductFilters />
-      <Suspense fallback={<ProductListSkeleton />}>
-        <ProductList />
-      </Suspense>
+      <ProductListClient />
     </>
   );
 }
