@@ -1,3 +1,4 @@
+import { API_URL } from "@/lib/api";
 import { delay } from "@/lib/delay";
 import { Pagination } from "@/types/pagination";
 import { Product } from "@/types/product";
@@ -26,9 +27,8 @@ export async function getProductsService(
 ): Promise<ProductResult> {
   await delay(1000);
   const query = buildQueryParams(filters);
-  const url = `http://localhost:3333/products?${query}`;
 
-  const response = await fetch(url);
+  const response = await fetch(`${API_URL}/products?${query}`);
 
   if (!response.ok) {
     throw new Error("Erro ao buscar produtos");

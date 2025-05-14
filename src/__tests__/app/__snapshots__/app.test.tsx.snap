@@ -1,0 +1,1805 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Home page > renders 'No products found' message correctly when there are no products 1`] = `
+<body>
+  <div>
+    <div
+      class="flex items-center justify-between py-4"
+    >
+      <div>
+        <h2
+          class="text-2xl font-bold tracking-tight"
+        >
+          Bem vindo!
+        </h2>
+        <p
+          class="text-muted-foreground"
+        >
+          Gerencie os produtos da sua loja com facilidade e eficiência.
+        </p>
+      </div>
+      <a
+        href="/create"
+      >
+        <button
+          class="cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-9 px-4 py-2 has-[>svg]:px-3"
+          data-slot="button"
+        >
+           
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-plus"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 12h14"
+            />
+            <path
+              d="M12 5v14"
+            />
+          </svg>
+           Adicionar
+        </button>
+      </a>
+    </div>
+    <div
+      class="flex flex-col md:flex-row gap-4 mt-10 border rounded-2xl p-4 justify-between md:justify-start items-center"
+    >
+      <div
+        class="w-full flex gap-2 flex-col"
+      >
+        <label
+          class="text-sm font-medium"
+          for="search"
+        >
+          Busca de produtos
+        </label>
+        <div
+          class="relative"
+        >
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-search absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m21 21-4.34-4.34"
+            />
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+          </svg>
+          <input
+            class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive pl-8 w-full flex-1"
+            data-slot="input"
+            id="search"
+            placeholder="Buscar por nome..."
+            type="search"
+          />
+        </div>
+      </div>
+      <div
+        class="w-full flex flex-col gap-2"
+      >
+        <label
+          class="flex items-center gap-2 select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 text-sm font-medium"
+          data-slot="label"
+        >
+          Faixa de Preço
+        </label>
+        <div
+          class="flex items-center gap-2"
+        >
+          <input
+            class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive font-mono"
+            data-slot="input"
+            inputmode="numeric"
+            placeholder="Mín"
+            value="R$ 0,00"
+          />
+          <span
+            class="text-muted-foreground"
+          >
+            -
+          </span>
+          <input
+            class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive font-mono"
+            data-slot="input"
+            inputmode="numeric"
+            placeholder="Máx"
+            value="R$ 0,00"
+          />
+        </div>
+      </div>
+      <div
+        class="flex flex-col gap-2 w-full md:w-fit"
+      >
+        <label
+          class="text-sm font-medium"
+          for="sort"
+        >
+          Visualizar por
+        </label>
+        <button
+          aria-autocomplete="none"
+          aria-controls="radix-«r7»"
+          aria-expanded="false"
+          class="border-input data-[placeholder]:text-muted-foreground [&_svg:not([class*='text-'])]:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 dark:hover:bg-input/50 flex w-fit items-center justify-between gap-2 rounded-md border bg-transparent px-3 py-2 text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 data-[size=default]:h-9 data-[size=sm]:h-8 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4"
+          data-size="default"
+          data-slot="select-trigger"
+          data-state="closed"
+          dir="ltr"
+          id="sort"
+          role="combobox"
+          type="button"
+        >
+          <span
+            data-slot="select-value"
+            style="pointer-events: none;"
+          >
+            <div
+              class="flex items-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-arrow-down-az lucide-arrow-down-a-z mr-2 h-4 w-4"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m3 16 4 4 4-4"
+                />
+                <path
+                  d="M7 20V4"
+                />
+                <path
+                  d="M20 8h-5"
+                />
+                <path
+                  d="M15 10V6.5a2.5 2.5 0 0 1 5 0V10"
+                />
+                <path
+                  d="M15 14h5l-5 6h5"
+                />
+              </svg>
+              <span>
+                Nome (A-Z)
+              </span>
+            </div>
+          </span>
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-chevron-down size-4 opacity-50"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m6 9 6 6 6-6"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="mt-4"
+    >
+      <div
+        class="col-span-full text-center py-8"
+      >
+        <p
+          class="text-gray-500"
+        >
+          Nenhum produto encontrado.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Home page > renders 'No products found' message correctly when there are no products snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="flex items-center justify-between py-4"
+    >
+      <div>
+        <h2
+          class="text-2xl font-bold tracking-tight"
+        >
+          Bem vindo!
+        </h2>
+        <p
+          class="text-muted-foreground"
+        >
+          Gerencie os produtos da sua loja com facilidade e eficiência.
+        </p>
+      </div>
+      <a
+        href="/create"
+      >
+        <button
+          class="cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-9 px-4 py-2 has-[>svg]:px-3"
+          data-slot="button"
+        >
+           
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-plus"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 12h14"
+            />
+            <path
+              d="M12 5v14"
+            />
+          </svg>
+           Adicionar
+        </button>
+      </a>
+    </div>
+    <div
+      class="flex flex-col md:flex-row gap-4 mt-10 border rounded-2xl p-4 justify-between md:justify-start items-center"
+    >
+      <div
+        class="w-full flex gap-2 flex-col"
+      >
+        <label
+          class="text-sm font-medium"
+          for="search"
+        >
+          Busca de produtos
+        </label>
+        <div
+          class="relative"
+        >
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-search absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m21 21-4.34-4.34"
+            />
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+          </svg>
+          <input
+            class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive pl-8 w-full flex-1"
+            data-slot="input"
+            id="search"
+            placeholder="Buscar por nome..."
+            type="search"
+          />
+        </div>
+      </div>
+      <div
+        class="w-full flex flex-col gap-2"
+      >
+        <label
+          class="flex items-center gap-2 select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 text-sm font-medium"
+          data-slot="label"
+        >
+          Faixa de Preço
+        </label>
+        <div
+          class="flex items-center gap-2"
+        >
+          <input
+            class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive font-mono"
+            data-slot="input"
+            inputmode="numeric"
+            placeholder="Mín"
+            value="R$ 0,00"
+          />
+          <span
+            class="text-muted-foreground"
+          >
+            -
+          </span>
+          <input
+            class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive font-mono"
+            data-slot="input"
+            inputmode="numeric"
+            placeholder="Máx"
+            value="R$ 0,00"
+          />
+        </div>
+      </div>
+      <div
+        class="flex flex-col gap-2 w-full md:w-fit"
+      >
+        <label
+          class="text-sm font-medium"
+          for="sort"
+        >
+          Visualizar por
+        </label>
+        <button
+          aria-autocomplete="none"
+          aria-controls="radix-«r13»"
+          aria-expanded="false"
+          class="border-input data-[placeholder]:text-muted-foreground [&_svg:not([class*='text-'])]:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 dark:hover:bg-input/50 flex w-fit items-center justify-between gap-2 rounded-md border bg-transparent px-3 py-2 text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 data-[size=default]:h-9 data-[size=sm]:h-8 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4"
+          data-size="default"
+          data-slot="select-trigger"
+          data-state="closed"
+          dir="ltr"
+          id="sort"
+          role="combobox"
+          type="button"
+        >
+          <span
+            data-slot="select-value"
+            style="pointer-events: none;"
+          >
+            <div
+              class="flex items-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-arrow-down-az lucide-arrow-down-a-z mr-2 h-4 w-4"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m3 16 4 4 4-4"
+                />
+                <path
+                  d="M7 20V4"
+                />
+                <path
+                  d="M20 8h-5"
+                />
+                <path
+                  d="M15 10V6.5a2.5 2.5 0 0 1 5 0V10"
+                />
+                <path
+                  d="M15 14h5l-5 6h5"
+                />
+              </svg>
+              <span>
+                Nome (A-Z)
+              </span>
+            </div>
+          </span>
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-chevron-down size-4 opacity-50"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m6 9 6 6 6-6"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="mt-4"
+    >
+      <div
+        class="col-span-full text-center py-8"
+      >
+        <p
+          class="text-gray-500"
+        >
+          Nenhum produto encontrado.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Home page > renders loading state correctly with skeleton snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="flex items-center justify-between py-4"
+    >
+      <div>
+        <h2
+          class="text-2xl font-bold tracking-tight"
+        >
+          Bem vindo!
+        </h2>
+        <p
+          class="text-muted-foreground"
+        >
+          Gerencie os produtos da sua loja com facilidade e eficiência.
+        </p>
+      </div>
+      <a
+        href="/create"
+      >
+        <button
+          class="cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-9 px-4 py-2 has-[>svg]:px-3"
+          data-slot="button"
+        >
+           
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-plus"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 12h14"
+            />
+            <path
+              d="M12 5v14"
+            />
+          </svg>
+           Adicionar
+        </button>
+      </a>
+    </div>
+    <div
+      class="flex flex-col md:flex-row gap-4 mt-10 border rounded-2xl p-4 justify-between md:justify-start items-center"
+    >
+      <div
+        class="w-full flex gap-2 flex-col"
+      >
+        <label
+          class="text-sm font-medium"
+          for="search"
+        >
+          Busca de produtos
+        </label>
+        <div
+          class="relative"
+        >
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-search absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m21 21-4.34-4.34"
+            />
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+          </svg>
+          <input
+            class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive pl-8 w-full flex-1"
+            data-slot="input"
+            id="search"
+            placeholder="Buscar por nome..."
+            type="search"
+          />
+        </div>
+      </div>
+      <div
+        class="w-full flex flex-col gap-2"
+      >
+        <label
+          class="flex items-center gap-2 select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 text-sm font-medium"
+          data-slot="label"
+        >
+          Faixa de Preço
+        </label>
+        <div
+          class="flex items-center gap-2"
+        >
+          <input
+            class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive font-mono"
+            data-slot="input"
+            inputmode="numeric"
+            placeholder="Mín"
+            value="R$ 0,00"
+          />
+          <span
+            class="text-muted-foreground"
+          >
+            -
+          </span>
+          <input
+            class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive font-mono"
+            data-slot="input"
+            inputmode="numeric"
+            placeholder="Máx"
+            value="R$ 0,00"
+          />
+        </div>
+      </div>
+      <div
+        class="flex flex-col gap-2 w-full md:w-fit"
+      >
+        <label
+          class="text-sm font-medium"
+          for="sort"
+        >
+          Visualizar por
+        </label>
+        <button
+          aria-autocomplete="none"
+          aria-controls="radix-«rs»"
+          aria-expanded="false"
+          class="border-input data-[placeholder]:text-muted-foreground [&_svg:not([class*='text-'])]:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 dark:hover:bg-input/50 flex w-fit items-center justify-between gap-2 rounded-md border bg-transparent px-3 py-2 text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 data-[size=default]:h-9 data-[size=sm]:h-8 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4"
+          data-size="default"
+          data-slot="select-trigger"
+          data-state="closed"
+          dir="ltr"
+          id="sort"
+          role="combobox"
+          type="button"
+        >
+          <span
+            data-slot="select-value"
+            style="pointer-events: none;"
+          >
+            <div
+              class="flex items-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-arrow-down-az lucide-arrow-down-a-z mr-2 h-4 w-4"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m3 16 4 4 4-4"
+                />
+                <path
+                  d="M7 20V4"
+                />
+                <path
+                  d="M20 8h-5"
+                />
+                <path
+                  d="M15 10V6.5a2.5 2.5 0 0 1 5 0V10"
+                />
+                <path
+                  d="M15 14h5l-5 6h5"
+                />
+              </svg>
+              <span>
+                Nome (A-Z)
+              </span>
+            </div>
+          </span>
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-chevron-down size-4 opacity-50"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m6 9 6 6 6-6"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="mt-4"
+    >
+      <div
+        class="space-y-8 mt-4"
+      >
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+        >
+          <div
+            class="rounded-xl border overflow-hidden"
+          >
+            <div
+              class="flex p-4"
+            >
+              <div
+                class="bg-accent animate-pulse h-24 w-24 rounded-lg flex-shrink-0"
+                data-slot="skeleton"
+              />
+              <div
+                class="ml-4 space-y-2 flex-grow"
+              >
+                <div
+                  class="bg-accent animate-pulse rounded-md h-5 w-3/4"
+                  data-slot="skeleton"
+                />
+                <div
+                  class="bg-accent animate-pulse rounded-md h-4 w-full"
+                  data-slot="skeleton"
+                />
+                <div
+                  class="bg-accent animate-pulse rounded-md h-4 w-full"
+                  data-slot="skeleton"
+                />
+                <div
+                  class="bg-accent animate-pulse rounded-md h-5 w-20 mt-2"
+                  data-slot="skeleton"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="rounded-xl border overflow-hidden"
+          >
+            <div
+              class="flex p-4"
+            >
+              <div
+                class="bg-accent animate-pulse h-24 w-24 rounded-lg flex-shrink-0"
+                data-slot="skeleton"
+              />
+              <div
+                class="ml-4 space-y-2 flex-grow"
+              >
+                <div
+                  class="bg-accent animate-pulse rounded-md h-5 w-3/4"
+                  data-slot="skeleton"
+                />
+                <div
+                  class="bg-accent animate-pulse rounded-md h-4 w-full"
+                  data-slot="skeleton"
+                />
+                <div
+                  class="bg-accent animate-pulse rounded-md h-4 w-full"
+                  data-slot="skeleton"
+                />
+                <div
+                  class="bg-accent animate-pulse rounded-md h-5 w-20 mt-2"
+                  data-slot="skeleton"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="rounded-xl border overflow-hidden"
+          >
+            <div
+              class="flex p-4"
+            >
+              <div
+                class="bg-accent animate-pulse h-24 w-24 rounded-lg flex-shrink-0"
+                data-slot="skeleton"
+              />
+              <div
+                class="ml-4 space-y-2 flex-grow"
+              >
+                <div
+                  class="bg-accent animate-pulse rounded-md h-5 w-3/4"
+                  data-slot="skeleton"
+                />
+                <div
+                  class="bg-accent animate-pulse rounded-md h-4 w-full"
+                  data-slot="skeleton"
+                />
+                <div
+                  class="bg-accent animate-pulse rounded-md h-4 w-full"
+                  data-slot="skeleton"
+                />
+                <div
+                  class="bg-accent animate-pulse rounded-md h-5 w-20 mt-2"
+                  data-slot="skeleton"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="rounded-xl border overflow-hidden"
+          >
+            <div
+              class="flex p-4"
+            >
+              <div
+                class="bg-accent animate-pulse h-24 w-24 rounded-lg flex-shrink-0"
+                data-slot="skeleton"
+              />
+              <div
+                class="ml-4 space-y-2 flex-grow"
+              >
+                <div
+                  class="bg-accent animate-pulse rounded-md h-5 w-3/4"
+                  data-slot="skeleton"
+                />
+                <div
+                  class="bg-accent animate-pulse rounded-md h-4 w-full"
+                  data-slot="skeleton"
+                />
+                <div
+                  class="bg-accent animate-pulse rounded-md h-4 w-full"
+                  data-slot="skeleton"
+                />
+                <div
+                  class="bg-accent animate-pulse rounded-md h-5 w-20 mt-2"
+                  data-slot="skeleton"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="rounded-xl border overflow-hidden"
+          >
+            <div
+              class="flex p-4"
+            >
+              <div
+                class="bg-accent animate-pulse h-24 w-24 rounded-lg flex-shrink-0"
+                data-slot="skeleton"
+              />
+              <div
+                class="ml-4 space-y-2 flex-grow"
+              >
+                <div
+                  class="bg-accent animate-pulse rounded-md h-5 w-3/4"
+                  data-slot="skeleton"
+                />
+                <div
+                  class="bg-accent animate-pulse rounded-md h-4 w-full"
+                  data-slot="skeleton"
+                />
+                <div
+                  class="bg-accent animate-pulse rounded-md h-4 w-full"
+                  data-slot="skeleton"
+                />
+                <div
+                  class="bg-accent animate-pulse rounded-md h-5 w-20 mt-2"
+                  data-slot="skeleton"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="rounded-xl border overflow-hidden"
+          >
+            <div
+              class="flex p-4"
+            >
+              <div
+                class="bg-accent animate-pulse h-24 w-24 rounded-lg flex-shrink-0"
+                data-slot="skeleton"
+              />
+              <div
+                class="ml-4 space-y-2 flex-grow"
+              >
+                <div
+                  class="bg-accent animate-pulse rounded-md h-5 w-3/4"
+                  data-slot="skeleton"
+                />
+                <div
+                  class="bg-accent animate-pulse rounded-md h-4 w-full"
+                  data-slot="skeleton"
+                />
+                <div
+                  class="bg-accent animate-pulse rounded-md h-4 w-full"
+                  data-slot="skeleton"
+                />
+                <div
+                  class="bg-accent animate-pulse rounded-md h-5 w-20 mt-2"
+                  data-slot="skeleton"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex justify-center mt-6"
+        >
+          <div
+            class="bg-accent animate-pulse rounded-md h-10 w-64"
+            data-slot="skeleton"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Home page > renders product card correctly when there are products 1`] = `
+<body>
+  <div>
+    <div
+      class="flex items-center justify-between py-4"
+    >
+      <div>
+        <h2
+          class="text-2xl font-bold tracking-tight"
+        >
+          Bem vindo!
+        </h2>
+        <p
+          class="text-muted-foreground"
+        >
+          Gerencie os produtos da sua loja com facilidade e eficiência.
+        </p>
+      </div>
+      <a
+        href="/create"
+      >
+        <button
+          class="cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-9 px-4 py-2 has-[>svg]:px-3"
+          data-slot="button"
+        >
+           
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-plus"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 12h14"
+            />
+            <path
+              d="M12 5v14"
+            />
+          </svg>
+           Adicionar
+        </button>
+      </a>
+    </div>
+    <div
+      class="flex flex-col md:flex-row gap-4 mt-10 border rounded-2xl p-4 justify-between md:justify-start items-center"
+    >
+      <div
+        class="w-full flex gap-2 flex-col"
+      >
+        <label
+          class="text-sm font-medium"
+          for="search"
+        >
+          Busca de produtos
+        </label>
+        <div
+          class="relative"
+        >
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-search absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m21 21-4.34-4.34"
+            />
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+          </svg>
+          <input
+            class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive pl-8 w-full flex-1"
+            data-slot="input"
+            id="search"
+            placeholder="Buscar por nome..."
+            type="search"
+          />
+        </div>
+      </div>
+      <div
+        class="w-full flex flex-col gap-2"
+      >
+        <label
+          class="flex items-center gap-2 select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 text-sm font-medium"
+          data-slot="label"
+        >
+          Faixa de Preço
+        </label>
+        <div
+          class="flex items-center gap-2"
+        >
+          <input
+            class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive font-mono"
+            data-slot="input"
+            inputmode="numeric"
+            placeholder="Mín"
+            value="R$ 0,00"
+          />
+          <span
+            class="text-muted-foreground"
+          >
+            -
+          </span>
+          <input
+            class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive font-mono"
+            data-slot="input"
+            inputmode="numeric"
+            placeholder="Máx"
+            value="R$ 0,00"
+          />
+        </div>
+      </div>
+      <div
+        class="flex flex-col gap-2 w-full md:w-fit"
+      >
+        <label
+          class="text-sm font-medium"
+          for="sort"
+        >
+          Visualizar por
+        </label>
+        <button
+          aria-autocomplete="none"
+          aria-controls="radix-«re»"
+          aria-expanded="false"
+          class="border-input data-[placeholder]:text-muted-foreground [&_svg:not([class*='text-'])]:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 dark:hover:bg-input/50 flex w-fit items-center justify-between gap-2 rounded-md border bg-transparent px-3 py-2 text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 data-[size=default]:h-9 data-[size=sm]:h-8 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4"
+          data-size="default"
+          data-slot="select-trigger"
+          data-state="closed"
+          dir="ltr"
+          id="sort"
+          role="combobox"
+          type="button"
+        >
+          <span
+            data-slot="select-value"
+            style="pointer-events: none;"
+          >
+            <div
+              class="flex items-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-arrow-down-az lucide-arrow-down-a-z mr-2 h-4 w-4"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m3 16 4 4 4-4"
+                />
+                <path
+                  d="M7 20V4"
+                />
+                <path
+                  d="M20 8h-5"
+                />
+                <path
+                  d="M15 10V6.5a2.5 2.5 0 0 1 5 0V10"
+                />
+                <path
+                  d="M15 14h5l-5 6h5"
+                />
+              </svg>
+              <span>
+                Nome (A-Z)
+              </span>
+            </div>
+          </span>
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-chevron-down size-4 opacity-50"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m6 9 6 6 6-6"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="mt-4"
+    >
+      <div
+        class="flex flex-col gap-4"
+      >
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+        >
+          <article
+            class="rounded-xl border overflow-hidden h-full flex flex-col"
+          >
+            <div
+              class="flex p-4 h-full items-center"
+            >
+              <div
+                class="relative h-24 w-24 rounded-lg overflow-hidden flex-shrink-0"
+              >
+                <img
+                  alt="Mouse"
+                  class="object-cover"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  sizes="100vw"
+                  src="/_next/image?url=%2Fmouse.jpg&w=3840&q=75"
+                  srcset="/_next/image?url=%2Fmouse.jpg&w=640&q=75 640w, /_next/image?url=%2Fmouse.jpg&w=750&q=75 750w, /_next/image?url=%2Fmouse.jpg&w=828&q=75 828w, /_next/image?url=%2Fmouse.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fmouse.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fmouse.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fmouse.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fmouse.jpg&w=3840&q=75 3840w"
+                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                />
+              </div>
+              <div
+                class="flex flex-col ml-4 flex-grow"
+              >
+                <h3
+                  class="font-medium text-lg text-gray-800"
+                >
+                  Mouse
+                </h3>
+                <p
+                  class="text-gray-500 text-sm line-clamp-2 mb-2"
+                >
+                  Mouse gamer com RGB
+                </p>
+                <span
+                  class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden text-foreground [a&]:hover:bg-accent [a&]:hover:text-accent-foreground"
+                  data-slot="badge"
+                >
+                  Periféricos
+                </span>
+                <span
+                  class="text-green-500 font-bold mt-2"
+                >
+                  R$ 149,99
+                </span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div
+          class="flex items-center justify-between px-2 mx-auto"
+        >
+          <div
+            class="flex items-center space-x-6 lg:space-x-8"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <p
+                class="text-sm font-medium"
+              >
+                Linhas por página
+              </p>
+              <button
+                aria-autocomplete="none"
+                aria-controls="radix-«rf»"
+                aria-expanded="false"
+                class="border-input data-[placeholder]:text-muted-foreground [&_svg:not([class*='text-'])]:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 dark:hover:bg-input/50 flex items-center justify-between gap-2 rounded-md border bg-transparent px-3 py-2 text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 data-[size=default]:h-9 data-[size=sm]:h-8 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 h-8 w-[70px]"
+                data-size="default"
+                data-slot="select-trigger"
+                data-state="closed"
+                dir="ltr"
+                role="combobox"
+                type="button"
+              >
+                <span
+                  data-slot="select-value"
+                  style="pointer-events: none;"
+                >
+                  10
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-chevron-down size-4 opacity-50"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m6 9 6 6 6-6"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="flex w-[100px] items-center justify-center text-sm font-medium"
+            >
+              Página 
+              1
+               de 
+              1
+            </div>
+            <div
+              class="flex items-center space-x-2"
+            >
+              <button
+                class="cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 has-[>svg]:px-3 hidden h-8 w-8 p-0 lg:flex"
+                data-slot="button"
+                disabled=""
+              >
+                <span
+                  class="sr-only"
+                >
+                  Go to first page
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-chevrons-left"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m11 17-5-5 5-5"
+                  />
+                  <path
+                    d="m18 17-5-5 5-5"
+                  />
+                </svg>
+              </button>
+              <button
+                class="cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 has-[>svg]:px-3 h-8 w-8 p-0"
+                data-slot="button"
+                disabled=""
+              >
+                <span
+                  class="sr-only"
+                >
+                  Go to previous page
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-chevron-left"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m15 18-6-6 6-6"
+                  />
+                </svg>
+              </button>
+              <button
+                class="cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 has-[>svg]:px-3 h-8 w-8 p-0"
+                data-slot="button"
+                disabled=""
+              >
+                <span
+                  class="sr-only"
+                >
+                  Go to next page
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-chevron-right"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m9 18 6-6-6-6"
+                  />
+                </svg>
+              </button>
+              <button
+                class="cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 has-[>svg]:px-3 hidden h-8 w-8 p-0 lg:flex"
+                data-slot="button"
+                disabled=""
+              >
+                <span
+                  class="sr-only"
+                >
+                  Go to last page
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-chevrons-right"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m6 17 5-5-5-5"
+                  />
+                  <path
+                    d="m13 17 5-5-5-5"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Home page > renders product card correctly when there are products snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="flex items-center justify-between py-4"
+    >
+      <div>
+        <h2
+          class="text-2xl font-bold tracking-tight"
+        >
+          Bem vindo!
+        </h2>
+        <p
+          class="text-muted-foreground"
+        >
+          Gerencie os produtos da sua loja com facilidade e eficiência.
+        </p>
+      </div>
+      <a
+        href="/create"
+      >
+        <button
+          class="cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-9 px-4 py-2 has-[>svg]:px-3"
+          data-slot="button"
+        >
+           
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-plus"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 12h14"
+            />
+            <path
+              d="M12 5v14"
+            />
+          </svg>
+           Adicionar
+        </button>
+      </a>
+    </div>
+    <div
+      class="flex flex-col md:flex-row gap-4 mt-10 border rounded-2xl p-4 justify-between md:justify-start items-center"
+    >
+      <div
+        class="w-full flex gap-2 flex-col"
+      >
+        <label
+          class="text-sm font-medium"
+          for="search"
+        >
+          Busca de produtos
+        </label>
+        <div
+          class="relative"
+        >
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-search absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m21 21-4.34-4.34"
+            />
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+          </svg>
+          <input
+            class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive pl-8 w-full flex-1"
+            data-slot="input"
+            id="search"
+            placeholder="Buscar por nome..."
+            type="search"
+          />
+        </div>
+      </div>
+      <div
+        class="w-full flex flex-col gap-2"
+      >
+        <label
+          class="flex items-center gap-2 select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 text-sm font-medium"
+          data-slot="label"
+        >
+          Faixa de Preço
+        </label>
+        <div
+          class="flex items-center gap-2"
+        >
+          <input
+            class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive font-mono"
+            data-slot="input"
+            inputmode="numeric"
+            placeholder="Mín"
+            value="R$ 0,00"
+          />
+          <span
+            class="text-muted-foreground"
+          >
+            -
+          </span>
+          <input
+            class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive font-mono"
+            data-slot="input"
+            inputmode="numeric"
+            placeholder="Máx"
+            value="R$ 0,00"
+          />
+        </div>
+      </div>
+      <div
+        class="flex flex-col gap-2 w-full md:w-fit"
+      >
+        <label
+          class="text-sm font-medium"
+          for="sort"
+        >
+          Visualizar por
+        </label>
+        <button
+          aria-autocomplete="none"
+          aria-controls="radix-«r1a»"
+          aria-expanded="false"
+          class="border-input data-[placeholder]:text-muted-foreground [&_svg:not([class*='text-'])]:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 dark:hover:bg-input/50 flex w-fit items-center justify-between gap-2 rounded-md border bg-transparent px-3 py-2 text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 data-[size=default]:h-9 data-[size=sm]:h-8 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4"
+          data-size="default"
+          data-slot="select-trigger"
+          data-state="closed"
+          dir="ltr"
+          id="sort"
+          role="combobox"
+          type="button"
+        >
+          <span
+            data-slot="select-value"
+            style="pointer-events: none;"
+          >
+            <div
+              class="flex items-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-arrow-down-az lucide-arrow-down-a-z mr-2 h-4 w-4"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m3 16 4 4 4-4"
+                />
+                <path
+                  d="M7 20V4"
+                />
+                <path
+                  d="M20 8h-5"
+                />
+                <path
+                  d="M15 10V6.5a2.5 2.5 0 0 1 5 0V10"
+                />
+                <path
+                  d="M15 14h5l-5 6h5"
+                />
+              </svg>
+              <span>
+                Nome (A-Z)
+              </span>
+            </div>
+          </span>
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-chevron-down size-4 opacity-50"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m6 9 6 6 6-6"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="mt-4"
+    >
+      <div
+        class="flex flex-col gap-4"
+      >
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+        >
+          <article
+            class="rounded-xl border overflow-hidden h-full flex flex-col"
+          >
+            <div
+              class="flex p-4 h-full items-center"
+            >
+              <div
+                class="relative h-24 w-24 rounded-lg overflow-hidden flex-shrink-0"
+              >
+                <img
+                  alt="Mouse"
+                  class="object-cover"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  sizes="100vw"
+                  src="/_next/image?url=%2Fmouse.jpg&w=3840&q=75"
+                  srcset="/_next/image?url=%2Fmouse.jpg&w=640&q=75 640w, /_next/image?url=%2Fmouse.jpg&w=750&q=75 750w, /_next/image?url=%2Fmouse.jpg&w=828&q=75 828w, /_next/image?url=%2Fmouse.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fmouse.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fmouse.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fmouse.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fmouse.jpg&w=3840&q=75 3840w"
+                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                />
+              </div>
+              <div
+                class="flex flex-col ml-4 flex-grow"
+              >
+                <h3
+                  class="font-medium text-lg text-gray-800"
+                >
+                  Mouse
+                </h3>
+                <p
+                  class="text-gray-500 text-sm line-clamp-2 mb-2"
+                >
+                  Mouse gamer com RGB
+                </p>
+                <span
+                  class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden text-foreground [a&]:hover:bg-accent [a&]:hover:text-accent-foreground"
+                  data-slot="badge"
+                >
+                  Periféricos
+                </span>
+                <span
+                  class="text-green-500 font-bold mt-2"
+                >
+                  R$ 149,99
+                </span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div
+          class="flex items-center justify-between px-2 mx-auto"
+        >
+          <div
+            class="flex items-center space-x-6 lg:space-x-8"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <p
+                class="text-sm font-medium"
+              >
+                Linhas por página
+              </p>
+              <button
+                aria-autocomplete="none"
+                aria-controls="radix-«r1b»"
+                aria-expanded="false"
+                class="border-input data-[placeholder]:text-muted-foreground [&_svg:not([class*='text-'])]:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 dark:hover:bg-input/50 flex items-center justify-between gap-2 rounded-md border bg-transparent px-3 py-2 text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 data-[size=default]:h-9 data-[size=sm]:h-8 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 h-8 w-[70px]"
+                data-size="default"
+                data-slot="select-trigger"
+                data-state="closed"
+                dir="ltr"
+                role="combobox"
+                type="button"
+              >
+                <span
+                  data-slot="select-value"
+                  style="pointer-events: none;"
+                >
+                  10
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-chevron-down size-4 opacity-50"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m6 9 6 6 6-6"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="flex w-[100px] items-center justify-center text-sm font-medium"
+            >
+              Página 
+              1
+               de 
+              1
+            </div>
+            <div
+              class="flex items-center space-x-2"
+            >
+              <button
+                class="cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 has-[>svg]:px-3 hidden h-8 w-8 p-0 lg:flex"
+                data-slot="button"
+                disabled=""
+              >
+                <span
+                  class="sr-only"
+                >
+                  Go to first page
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-chevrons-left"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m11 17-5-5 5-5"
+                  />
+                  <path
+                    d="m18 17-5-5 5-5"
+                  />
+                </svg>
+              </button>
+              <button
+                class="cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 has-[>svg]:px-3 h-8 w-8 p-0"
+                data-slot="button"
+                disabled=""
+              >
+                <span
+                  class="sr-only"
+                >
+                  Go to previous page
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-chevron-left"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m15 18-6-6 6-6"
+                  />
+                </svg>
+              </button>
+              <button
+                class="cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 has-[>svg]:px-3 h-8 w-8 p-0"
+                data-slot="button"
+                disabled=""
+              >
+                <span
+                  class="sr-only"
+                >
+                  Go to next page
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-chevron-right"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m9 18 6-6-6-6"
+                  />
+                </svg>
+              </button>
+              <button
+                class="cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 has-[>svg]:px-3 hidden h-8 w-8 p-0 lg:flex"
+                data-slot="button"
+                disabled=""
+              >
+                <span
+                  class="sr-only"
+                >
+                  Go to last page
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-chevrons-right"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m6 17 5-5-5-5"
+                  />
+                  <path
+                    d="m13 17 5-5-5-5"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;

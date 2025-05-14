@@ -1,61 +1,10 @@
 import { create } from "zustand";
-import { Product } from "@/types/product";
 import { getProductsService } from "@/services/products/get-products.service";
-import { Pagination } from "@/types/pagination";
-
-type ResetParams = {
-  list?: Product[];
-  pagination?: Pagination;
-};
-
-type ProductFilters = {
-  search: string;
-  price_range: {
-    start?: number;
-    end?: number;
-  };
-  sort?: string;
-  order?: string;
-};
-
-type ProductStore = {
-  products: Product[];
-  filters: ProductFilters | null;
-  loading: boolean;
-  error: string | null;
-  pagination: Pagination;
-
-  fetchProducts: () => Promise<void>;
-  addProduct: (product: Product) => void;
-  reset: (params: ResetParams) => void;
-  setPage: (page: number) => void;
-  setPageSize: (pageSize: number) => void;
-  setFilters: (filters: Partial<ProductFilters>) => void;
-};
+import { ProductStore } from "./types";
+import { initialProductState } from "./state";
 
 export const useProductStore = create<ProductStore>((set, get) => ({
-  products: [],
-  filters: {
-    search: "",
-    price_range: {
-      start: undefined,
-      end: undefined,
-    },
-    sort: "name",
-    order: "asc",
-  },
-  loading: false,
-  error: null,
-  pagination: {
-    current: 1,
-    pageSize: 10,
-    first: 1,
-    prev: null,
-    next: null,
-    last: 1,
-    pages: 1,
-    items: 0,
-  },
+  ...initialProductState,
 
   fetchProducts: async () => {
     const { pagination, filters } = get();

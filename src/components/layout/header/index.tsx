@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 import Link from "next/link";
 
-export async function Header() {
+export function Header() {
   return (
     <div className="flex items-center justify-between py-4">
       <div>
